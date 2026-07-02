@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #101828;
+  }
+}
+
+@layer utilities {
+  .font-geist {
+    font-family: 'Geist', 'Inter', system-ui, sans-serif;
+  }
+}
