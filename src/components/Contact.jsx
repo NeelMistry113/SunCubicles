@@ -34,15 +34,33 @@ const contactInfo = [
 
 const serviceAreas = ['Ahmedabad', 'Mumbai', 'Delhi', 'Bangalore', 'Hyderabad', 'Chennai', 'Pune', 'Kolkata', 'Surat', 'Jaipur', 'All India']
 
+const WEB3FORMS_KEY = '40f8a9f9-1b71-4c8e-9b92-e2b9a83094fe'
+
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', city: '', message: '' })
+  const [status, setStatus] = useState('idle') // idle | sending | success | error
 
   const handleChange = (e) => setForm((p) => ({ ...p, [e.target.name]: e.target.value }))
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    alert('Thank you! We will get back to you shortly.')
-    setForm({ name: '', email: '', phone: '', city: '', message: '' })
+    setStatus('sending')
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ access_key: WEB3FORMS_KEY, ...form }),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setStatus('success')
+        setForm({ name: '', email: '', phone: '', city: '', message: '' })
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   const inputStyle = {
@@ -209,24 +227,26 @@ export default function Contact() {
               </div>
 
               <div className="flex flex-col gap-[12px]">
-                <button
-                  type="submit"
-                  className="w-full bg-[#030213] text-white hover:bg-[#1a1a2e] transition-colors"
-                  style={{
-                    fontFamily: 'Inter, sans-serif',
-                    fontSize: '16px',
-                    padding: '14px 24px',
-                    borderRadius: '10px',
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                >
-                  Send Message
-                </button>
-                <p
-                  className="text-center text-[#4a5565]"
-                  style={{ fontFamily: 'Inter, sans-serif', fontSize: '12px', lineHeight: '1.3' }}
-                >
+                {status === 'success' ? (
+                  <div className="w-full text-center py-4 rounded-xl bg-green-50 text-green-700" style={{ fontFamily: 'Inter, sans-serif', fontSize: '15px' }}>
+                    Thank you! We'll get back to you shortly.
+                  </div>
+                ) : (
+                  <button
+                    type="submit"
+                    disabled={status === 'sending'}
+                    className="w-full bg-[#030213] text-white hover:bg-[#1a1a2e] transition-colors disabled:opacity-60"
+                    style={{ fontFamily: 'Inter, sans-serif', fontSize: '16px', padding: '14px 24px', borderRadius: '10px', border: 'none', cursor: 'pointer' }}
+                  >
+                    {status === 'sending' ? 'Sending...' : 'Send Message'}
+                  </button>
+                )}
+                {status === 'error' && (
+                  <p className="text-center text-red-500" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px' }}>
+                    Something went wrong. Please try again.
+                  </p>
+                )}
+                <p className="text-center text-[#4a5565]" style={{ fontFamily: 'Inter, sans-serif', fontSize: '12px', lineHeight: '1.3' }}>
                   We respect your privacy. Your information will not be shared with third parties.
                 </p>
               </div>
