@@ -42,7 +42,7 @@ export default function Header() {
 
         {/* CTA */}
         <div className="flex items-center gap-[16px]">
-          <a href="tel:+919876543210" className="flex items-center gap-[8px] h-[20px] text-[#364153] text-[14px] hover:text-[#030213] transition-colors">
+          <a href="tel:+919054715520" className="flex items-center gap-[8px] h-[20px] text-[#364153] text-[14px] hover:text-[#030213] transition-colors">
             <img src={IMG_PHONE} alt="" className="w-[16px] h-[16px]" />
             <span className="leading-[20px]">Call Us</span>
           </a>
@@ -79,7 +79,7 @@ export default function Header() {
             </a>
           ))}
           <div className="pt-3 border-t border-gray-100 flex flex-col gap-3">
-            <a href="tel:+919876543210" className="text-sm text-[#364153]">📞 +91 98765 43210</a>
+            <a href="tel:+919054715520" className="text-sm text-[#364153]">📞 +91 90547 15520</a>
             <a href="#contact-form" onClick={() => setOpen(false)} className="bg-[#030213] text-white text-sm py-2.5 rounded-lg text-center">Get Quote</a>
           </div>
         </div>

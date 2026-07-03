@@ -108,7 +108,7 @@ export default function Hero() {
               <img src={IMG_ARROW} alt="" className="w-[20px] h-[20px]" />
             </a>
             <a
-              href="tel:+919876543210"
+              href="tel:+919054715520"
               className="flex items-center justify-center gap-[10px] bg-white hover:bg-gray-50 transition-colors"
               style={{
                 padding: '16px 24px',
@@ -169,7 +169,7 @@ export default function Hero() {
             <a href="#contact-form" className="flex items-center justify-center gap-3 bg-[#030213] text-white py-4 px-6 rounded-xl text-base font-medium">
               Get a Free Quote →
             </a>
-            <a href="tel:+919876543210" className="flex items-center justify-center gap-3 bg-white border border-black/10 text-[#0a0a0a] py-4 px-6 rounded-xl text-base font-medium">
+            <a href="tel:+919054715520" className="flex items-center justify-center gap-3 bg-white border border-black/10 text-[#0a0a0a] py-4 px-6 rounded-xl text-base font-medium">
               Call Us
             </a>
           </div>
