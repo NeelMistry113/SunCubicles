@@ -100,7 +100,7 @@ export default function Hero() {
 
           <div className="flex items-start gap-[24px] shrink-0">
             <a
-              href="#contact"
+              href="#contact-form"
               className="flex items-center gap-[20px] bg-[#030213] text-white hover:bg-[#1a1a2e] transition-colors"
               style={{ padding: '16px 24px', borderRadius: '10px', fontSize: '18px', fontFamily: 'Inter, sans-serif' }}
             >
@@ -166,7 +166,7 @@ export default function Hero() {
             Transform Your<br />Restroom Spaces
           </h1>
           <div className="flex flex-col gap-3">
-            <a href="#contact" className="flex items-center justify-center gap-3 bg-[#030213] text-white py-4 px-6 rounded-xl text-base font-medium">
+            <a href="#contact-form" className="flex items-center justify-center gap-3 bg-[#030213] text-white py-4 px-6 rounded-xl text-base font-medium">
               Get a Free Quote →
             </a>
             <a href="tel:+919876543210" className="flex items-center justify-center gap-3 bg-white border border-black/10 text-[#0a0a0a] py-4 px-6 rounded-xl text-base font-medium">

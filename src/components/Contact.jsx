@@ -9,13 +9,13 @@ const contactInfo = [
   {
     icon: IMG_LOC,
     title: 'Our Location',
-    line1: 'Ahmedabad, Gujarat, India',
+    line1: 'Vaishnodevi, Ahmedabad, Gujrat, India',
     line2: 'Serving all major cities across India',
   },
   {
     icon: IMG_PHONE_W,
     title: 'Phone Number',
-    line1: '+91 98765 43210',
+    line1: '+91 90547 15520',
     line2: 'Mon - Sat, 9:00 AM - 7:00 PM',
   },
   {
@@ -147,6 +147,7 @@ export default function Contact() {
 
           {/* Right column — form */}
           <div
+            id="contact-form"
             className="flex flex-col gap-[24px] self-stretch"
             style={{
               width: 'min(600px, 100%)',

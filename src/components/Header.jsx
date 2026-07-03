@@ -47,7 +47,7 @@ export default function Header() {
             <span className="leading-[20px]">Call Us</span>
           </a>
           <a
-            href="#contact"
+            href="#contact-form"
             className="flex items-center justify-center bg-[#030213] text-white text-[14px] leading-[20px] rounded-[8px] hover:bg-[#1a1a2e] transition-colors"
             style={{ width: '96px', height: '36px' }}
           >
@@ -80,7 +80,7 @@ export default function Header() {
           ))}
           <div className="pt-3 border-t border-gray-100 flex flex-col gap-3">
             <a href="tel:+919876543210" className="text-sm text-[#364153]">📞 +91 98765 43210</a>
-            <a href="#contact" onClick={() => setOpen(false)} className="bg-[#030213] text-white text-sm py-2.5 rounded-lg text-center">Get Quote</a>
+            <a href="#contact-form" onClick={() => setOpen(false)} className="bg-[#030213] text-white text-sm py-2.5 rounded-lg text-center">Get Quote</a>
           </div>
         </div>
       )}

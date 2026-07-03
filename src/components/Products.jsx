@@ -27,10 +27,10 @@ const features = [
 ]
 
 const specs = [
-  { label: 'Thickness', value: '10mm – 25mm' },
-  { label: 'Material', value: 'HPL / Compact' },
+  { label: 'Thickness', value: '12mm – 18mm' },
+  { label: 'Material', value: 'HPL / BOILO Sheet' },
   { label: 'Size', value: 'Customizable' },
-  { label: 'Warranty', value: '5 Years' },
+  { label: 'Warranty', value: '25 Years Warranty on sheet' },
 ]
 
 export default function Products() {
@@ -176,7 +176,7 @@ export default function Products() {
                 ))}
               </div>
               <a
-                href="#contact"
+                href="#contact-form"
                 className="flex items-center justify-center w-full bg-white hover:bg-blue-50 transition-colors"
                 style={{
                   fontFamily: 'Inter, sans-serif',
