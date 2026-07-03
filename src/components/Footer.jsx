@@ -87,7 +87,7 @@ export default function Footer() {
               Contact
             </p>
             <ul className="flex flex-col gap-[12px]">
-              {['Ahmedabad, Gujarat, India', '+91 98765 43210', 'info@cubiclesolutions.com', 'Mon–Sat, 9AM–7PM IST'].map((t) => (
+              {['Ahmedabad, Gujarat, India', '+91 90547 15520', 'contact@suncubicles.com', 'Mon–Sat, 9AM–7PM IST'].map((t) => (
                 <li key={t}>
                   <span className="text-[#99a1af]" style={{ fontFamily: 'Inter, sans-serif', fontSize: '14px', lineHeight: '1.3' }}>
                     {t}

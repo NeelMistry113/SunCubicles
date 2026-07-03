@@ -21,7 +21,7 @@ const contactInfo = [
   {
     icon: IMG_MAIL,
     title: 'Email Address',
-    line1: 'info@cubiclesolutions.com',
+    line1: 'contact@suncubicles.com',
     line2: '24/7 email support',
   },
   {
@@ -168,7 +168,7 @@ export default function Contact() {
                 {[
                   { label: 'Full Name *', name: 'name', type: 'text', placeholder: 'Enter your name' },
                   { label: 'Email Address *', name: 'email', type: 'email', placeholder: 'your.email@example.com' },
-                  { label: 'Phone Number *', name: 'phone', type: 'tel', placeholder: '+91 98765 43210' },
+                  { label: 'Phone Number *', name: 'phone', type: 'tel', placeholder: '+91 90547 15520' },
                   { label: 'City *', name: 'city', type: 'text', placeholder: 'Your city' },
                 ].map(({ label, name, type, placeholder }) => (
                   <div key={name} className="flex flex-col gap-[8px]">
